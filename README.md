@@ -1,3 +1,3 @@
-# contenthandler-template
+# core-contenthandler-generic
 
-contenthandler-template
+core-contenthandler-generic

@@ -15,5 +15,5 @@ export default defineConfig({
     outDir: "build",
     emptyOutDir: true,
   },
-  base: "/clients/contenthandler-template/",
+  base: "/clients/core-contenthandler-generic/",
 });

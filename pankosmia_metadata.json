@@ -1,15 +1,32 @@
 {
-  "id": "contenthandler-template",
+  "id": "core-contenthandler-generic",
   "require": {
     "net": false,
-    "debug": true
+    "debug": true,
+    "minServerVersion": "0.12.14"
+  },
+  "endpoints": {
+    "textTranslation": {
+      "about_repo": [
+        {
+          "doc": "About repo textTranslation document",
+          "placeHolders": {
+            "REPO_PATH": {
+              "doc": "The path to the repo in <X>/<Y>/<Z> format"
+            }
+          },
+          "label": "pages:content:about_repo",
+          "url": "/aboutRepo?repoPath=%%REPO_PATH%%"
+        }
+      ]
+    }
   },
   "i18n": {
     "title": {
-      "en": "contenthandler-template"
+      "en": "core-contenthandler-generic"
     },
     "summary": {
-      "en": "contenthandler-template"
+      "en": "core-contenthandler-generic"
     },
     "stub_content": {
       "en": "Content goes here"

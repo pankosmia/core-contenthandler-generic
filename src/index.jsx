@@ -2,8 +2,7 @@ import { createRoot } from "react-dom/client";
 import { SpaContainer } from "pankosmia-rcl";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-// import CreatePage from "./pages/create";
-// import UpdatePage from "./pages/update";
+import AboutRepo from "./AboutRepo";
 import App from "./App";
 
 const router = createHashRouter([
@@ -11,14 +10,10 @@ const router = createHashRouter([
     path: "/",
     element: <App />,
   },
-  // {
-  //   path: "createPage",
-  //   element: <CreatePage />,
-  // },
-  // {
-  //   path: "updatePage",
-  //   element: <UpdatePage />,
-  // },
+  {
+    path: "/aboutRepo",
+    element: <AboutRepo />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
