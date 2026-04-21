@@ -6,10 +6,10 @@
     "minServerVersion": "0.12.14"
   },
   "endpoints": {
-    "textTranslation": {
+    "all": {
       "about_repo": [
         {
-          "doc": "About repo textTranslation document",
+          "doc": "About repo all document",
           "placeHolders": {
             "REPO_PATH": {
               "doc": "The path to the repo in <X>/<Y>/<Z> format"
