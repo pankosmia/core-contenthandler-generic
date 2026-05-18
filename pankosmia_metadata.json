@@ -17,7 +17,7 @@
               "doc": "The path to the repo in <X>/<Y>/<Z> format"
             }
           },
-          "label": "pages:content:about_repo",
+          "label": "pages:core-contenthandler-generic:about_document",
           "url": "/aboutRepo?repoPath=%%REPO_PATH%%"
         }
       ]
@@ -32,6 +32,10 @@
     },
     "stub_content": {
       "en": "Content goes here"
+    },
+    "about_document": {
+      "en": "Propreties",
+      "fr": "Propriétés"
     }
   }
 }
