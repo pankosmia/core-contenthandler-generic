@@ -1,5 +1,5 @@
 import { useContext, useState, useCallback, useEffect } from "react";
-import { Button, Chip, Grid2 } from "@mui/material";
+import { Grid2 } from "@mui/material";
 import { doI18n } from "pithekos-lib";
 import { i18nContext } from "pankosmia-rcl";
 import { useNavigate } from "react-router-dom";
@@ -30,18 +30,6 @@ function App() {
           )}
         </h1>
       </Grid2>
-      <Chip
-        label="bouton create"
-        color="secondary"
-        variant="outlined"
-        onClick={() => navigate("createPage")}
-      />
-      <Chip
-        label="bouton update"
-        color="secondary"
-        variant="outlined"
-        onClick={() => navigate("updatePage")}
-      />
     </Grid2>
   );
 }

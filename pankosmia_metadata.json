@@ -1,5 +1,7 @@
 {
   "id": "core-contenthandler-generic",
+  "exclude_from_menu": true,
+  "exclude_from_dashboard": true,
   "require": {
     "net": false,
     "debug": true,
@@ -15,7 +17,7 @@
               "doc": "The path to the repo in <X>/<Y>/<Z> format"
             }
           },
-          "label": "pages:content:about_repo",
+          "label": "pages:core-contenthandler-generic:about_document",
           "url": "/aboutRepo?repoPath=%%REPO_PATH%%"
         }
       ]
@@ -30,6 +32,10 @@
     },
     "stub_content": {
       "en": "Content goes here"
+    },
+    "about_document": {
+      "en": "Properties",
+      "fr": "Propriétés"
     }
   }
 }

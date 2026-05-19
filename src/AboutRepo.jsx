@@ -94,7 +94,7 @@ export default function AboutRepo() {
         requireNet={false}
       />
       <PanDialog
-        titleLabel={`${doI18n("pages:content:about_document", i18nRef.current)} ${repoInfo ? `${repoInfo.source ? doI18n(repoInfo.source, i18nRef.current) : `${repoInfo.path?.split("/")[1]} (${repoInfo.path?.split("/")[0]})`}  - ${repoInfo.name}` : repoData.name}`}
+        titleLabel={`${doI18n("pages:content:about_repo", i18nRef.current)} ${repoInfo ? `${repoInfo.source ? doI18n(repoInfo.source, i18nRef.current) : `${repoInfo.path?.split("/")[1]} (${repoInfo.path?.split("/")[0]})`}  - ${repoInfo.name}` : repoData.name}`}
         isOpen={open}
         closeFn={() => handleClose()}
       >
