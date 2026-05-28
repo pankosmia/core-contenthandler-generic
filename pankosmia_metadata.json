@@ -1,15 +1,17 @@
 {
   "id": "core-contenthandler-generic",
+  "exclude_from_menu": true,
+  "exclude_from_dashboard": true,
   "require": {
     "net": false,
     "debug": true,
     "minServerVersion": "0.12.14"
   },
   "endpoints": {
-    "textTranslation": {
+    "all": {
       "about_repo": [
         {
-          "doc": "About repo textTranslation document",
+          "doc": "About repo all document",
           "placeHolders": {
             "REPO_PATH": {
               "doc": "The path to the repo in <X>/<Y>/<Z> format"
