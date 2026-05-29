@@ -24,7 +24,7 @@ export default function AboutRepo() {
 
   const getProjectSummaries = async () => {
     const summariesResponse = await getJson(
-      `/burrito/metadata/summary/${path}`,
+      `/api/burrito/metadata/summary/${path}`,
       debugContext.current,
     );
     if (summariesResponse.ok) {
@@ -79,7 +79,7 @@ export default function AboutRepo() {
           backgroundPosition: "center",
           zIndex: -1,
           backgroundImage:
-            'url("/app-resources/pages/content/background_blur.png")',
+            'url("/api/app-resources/pages/content/background_blur.png")',
           backgroundRepeat: "no-repeat",
           backdropFilter: "blur(3px)",
         }}
