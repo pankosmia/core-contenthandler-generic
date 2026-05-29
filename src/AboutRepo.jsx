@@ -24,7 +24,7 @@ export default function AboutRepo() {
 
   const getProjectSummaries = async () => {
     const summariesResponse = await getJson(
-      `/burrito/metadata/summary/${path}`,
+      `/api/burrito/metadata/summary/${path}`,
       debugContext.current,
     );
     if (summariesResponse.ok) {
