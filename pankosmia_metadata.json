@@ -5,7 +5,7 @@
   "require": {
     "net": false,
     "debug": true,
-    "minServerVersion": "0.12.14"
+    "minServerVersion": "0.16.1"
   },
   "endpoints": {
     "all": {
