@@ -1,5 +1,6 @@
 import { Box, DialogContent, DialogContentText } from "@mui/material";
-import { doI18n, getJson } from "pithekos-lib";
+import { getJson } from "pankosmia-lib/http";
+import { doI18n } from "pankosmia-lib/i18n";
 import {
   PanDialog,
   PanDialogActions,
