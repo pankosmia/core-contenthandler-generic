@@ -16,10 +16,9 @@ export default function AboutRepo() {
   const [open, setOpen] = useState(true);
   const hash = window.location.hash;
   const query = hash.includes("?") ? hash.split("?") : "";
-  const repoPathQuery = new URLSearchParams(query[1]);
-  const typePageQuery = new URLSearchParams(query[2]);
-  const returnType = typePageQuery.get("returnTypePage");
-  const path = repoPathQuery.get("repoPath");
+  const repoPathTypePageQuery = new URLSearchParams(query[1]);
+  const returnType = repoPathTypePageQuery.get("returnTypePage");
+  const path = repoPathTypePageQuery.get("repoPath");
   const [repoData, setRepodata] = useState({});
   const [repoInfo, setRepoInfo] = useState();
 
