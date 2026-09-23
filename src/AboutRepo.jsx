@@ -68,7 +68,6 @@ export default function AboutRepo() {
     }
   }, [repoData]);
 
-  console.log("🚀 ~ AboutRepo ~ repoInfo:", repoInfo);
   return (
     <Box>
       <Box
