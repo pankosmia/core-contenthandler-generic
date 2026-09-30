@@ -16,10 +16,9 @@ export default function AboutRepo() {
   const [open, setOpen] = useState(true);
   const hash = window.location.hash;
   const query = hash.includes("?") ? hash.split("?") : "";
-  const repoPathQuery = new URLSearchParams(query[1]);
-  const typePageQuery = new URLSearchParams(query[2]);
-  const returnType = typePageQuery.get("returnTypePage");
-  const path = repoPathQuery.get("repoPath");
+  const repoPathTypePageQuery = new URLSearchParams(query[1]);
+  const returnType = repoPathTypePageQuery.get("returnTypePage");
+  const path = repoPathTypePageQuery.get("repoPath");
   const [repoData, setRepodata] = useState({});
   const [repoInfo, setRepoInfo] = useState();
 
@@ -94,8 +93,14 @@ export default function AboutRepo() {
         currentId="content"
         requireNet={false}
       />
+
       <PanDialog
-        titleLabel={`${doI18n("pages:content:about_document", i18nRef.current)} ${repoInfo ? `${repoInfo.source ? doI18n(repoInfo.source, i18nRef.current) : `${repoInfo.path?.split("/")[1]} (${repoInfo.path?.split("/")[0]})`}  - ${repoInfo.name}` : repoData.name}`}
+        titleLabel={`${doI18n("pages:content:about_document", i18nRef.current)} 
+        ${
+          repoInfo
+            ? `${repoInfo.source ? doI18n(repoInfo.source.toLowerCase(), i18nRef.current) : `${repoInfo.path?.split("/")[1]} (${repoInfo.path?.split("/")[0]})`}  - ${repoInfo.name}`
+            : repoData.name
+        }`}
         isOpen={open}
         closeFn={() => handleClose()}
       >
