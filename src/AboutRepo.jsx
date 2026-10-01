@@ -32,7 +32,7 @@ export default function AboutRepo() {
       setRepodata({ ...data, path });
     } else {
       console.error(
-        `${doI18n("pages:core-contenthandler_text_translation:error_data", i18nRef.current)}`,
+        `${doI18n("pages:core-contenthandler-generic:error_data", i18nRef.current)}`,
       );
     }
   };
