@@ -36,18 +36,14 @@ export default function DeleteBook() {
   const [nameProject, setNameProject] = useState("");
   const hash = window.location.hash;
 
-  const query = hash.includes("?") ? hash.split("?") : "";
+  const query = hash.includes("?") ? hash.split(/[?&]/) : "";
   const params = new URLSearchParams(window.location.search);
-  console.log(params.get("repoPath"));
   const repoPathQuery = new URLSearchParams(query[1]);
   const path = repoPathQuery.get("repoPath");
   const typePageQuery = new URLSearchParams(query[2]);
   const returnType = typePageQuery.get("returnTypePage");
   const typeDelete = new URLSearchParams(query[3]);
-  const { type } = useParams();
-
   const returnTypeDelete = typePageQuery.get("type");
-  console.log(type);
   const getProjectSummaries = async () => {
     setRepoPath(path);
     const summariesResponse = await getJson(
@@ -97,7 +93,7 @@ export default function DeleteBook() {
 
   const handleDelete = async () => {
     const deleteResponse = await postJson(
-      `/api/burrito/ingredient/delete/${repoPath}?ipath=${bookCode}.usfm`,
+      `/api/burrito/ingredient/delete/${repoPath}?ipath=${bookCode}.${returnTypeDelete}`,
       debugRef.current,
     );
     if (deleteResponse.ok) {
