@@ -21,6 +21,48 @@
           "url": "/aboutRepo?repoPath=%%REPO_PATH%%"
         }
       ]
+    },
+    "x-bcvnotes": {
+      "delete_book": [
+        {
+          "doc": "Delete a book to a bcv Notes document",
+          "placeHolders": {
+            "REPO_PATH": {
+              "doc": "The path to the repo in <X>/<Y>/<Z> format"
+            }
+          },
+          "label": "pages:core-contenthandler-generic:delete_book",
+          "url": "/deleteBook?repoPath=%%REPO_PATH%%&type=tsv"
+        }
+      ]
+    },
+    "x-bcvquestions": {
+      "delete_book": [
+        {
+          "doc": "Delete a book to a bcv Notes document",
+          "placeHolders": {
+            "REPO_PATH": {
+              "doc": "The path to the repo in <X>/<Y>/<Z> format"
+            }
+          },
+          "label": "pages:core-contenthandler-generic:delete_book",
+          "url": "/deleteBook?repoPath=%%REPO_PATH%%&type=tsv"
+        }
+      ]
+    },
+    "textTranslation": {
+      "delete_book": [
+        {
+          "doc": "Delete a book to a textTranslation document",
+          "placeHolders": {
+            "REPO_PATH": {
+              "doc": "The path to the repo in <X>/<Y>/<Z> format"
+            }
+          },
+          "label": "pages:core-contenthandler_text_translation:delete_book",
+          "url": "/deleteBook?repoPath=%%REPO_PATH%%&type=usfm"
+        }
+      ]
     }
   },
   "i18n": {
@@ -32,6 +74,38 @@
     },
     "stub_content": {
       "en": "Content goes here"
+    },
+    "error_data": {
+      "en": "Error fetching data",
+      "fr": "Erreur lors de la récupération des données"
+    },
+    "close": {
+      "en": "Close",
+      "es": "Cerrar",
+      "fr": "Fermer",
+      "id": "Tutup"
+    },
+    "book_deleted": {
+      "en": "Book deleted",
+      "fr": "Livre supprimé"
+    },
+    "book_delete_error": {
+      "en": "The book could not be deleted ",
+      "fr": "Le livre ne peut pas être supprimé"
+    },
+    "book_code": {
+      "en": "Book",
+      "fr": "livre",
+      "es": "Libro",
+      "id": "@Kode Buku"
+    },
+    "delete_button": {
+      "en": "Delete",
+      "fr": "Supprimer"
+    },
+    "delete_book": {
+      "en": "Delete Book",
+      "fr": "Supprimer un livre"
     }
   }
 }
