@@ -116,6 +116,7 @@ export default function AboutRepo() {
                         "language_code",
                         "language_name",
                         "book_codes",
+                        "copyright",
                       ]
                     : [
                         "name",
@@ -125,6 +126,7 @@ export default function AboutRepo() {
                         "language_code",
                         "language_name",
                         "book_codes",
+                        "copyright",
                       ];
                 if (!keys.includes(key)) return null;
                 return (
@@ -154,6 +156,9 @@ export default function AboutRepo() {
                       : null}
                     {key === "name" ? `${value}` : null}
                     {key === "description" ? `${value}` : null}
+                    {key === "copyright"
+                      ? `${doI18n("pages:core-contenthandler-generic:about_repo_copyright", i18nRef.current)} : ${value}`
+                      : null}
                   </DialogContentText>
                 );
               })

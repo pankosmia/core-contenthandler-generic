@@ -44,7 +44,6 @@ function DeleteContent({
       titleLabel={doI18n("pages:content:delete_content", i18nRef.current)}
       isOpen={open}
       closeFn={() => closeFn()}
-      theme={theme}
     >
       <DialogContent>
         <DialogContentText>
