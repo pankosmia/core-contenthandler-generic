@@ -20,6 +20,26 @@
           "label": "pages:content:about_repo",
           "url": "/aboutRepo?repoPath=%%REPO_PATH%%"
         }
+      ],
+      "export": [
+        {
+          "subMenu": [
+            {
+              "burrito": [
+                {
+                  "doc": "Export to burrito a textTranslation document",
+                  "placeHolders": {
+                    "REPO_PATH": {
+                      "doc": "The path to the repo in <X>/<Y>/<Z> format"
+                    }
+                  },
+                  "label": "pages:core-contenthandler-generic:saveAsBurrito",
+                  "url": "/export/burrito?repoPath=%%REPO_PATH%%"
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     "x-bcvnotes": {
@@ -61,26 +81,6 @@
           },
           "label": "pages:core-contenthandler_text_translation:delete_book",
           "url": "/deleteBook?repoPath=%%REPO_PATH%%&type=usfm"
-        }
-      ],
-      "export": [
-        {
-          "subMenu": [
-            {
-              "burrito": [
-                {
-                  "doc": "Export to burrito a textTranslation document",
-                  "placeHolders": {
-                    "REPO_PATH": {
-                      "doc": "The path to the repo in <X>/<Y>/<Z> format"
-                    }
-                  },
-                  "label": "pages:core-contenthandler-generic:saveAsBurrito",
-                  "url": "/export/burrito?repoPath=%%REPO_PATH%%"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

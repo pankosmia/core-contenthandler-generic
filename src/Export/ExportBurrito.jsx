@@ -35,7 +35,10 @@ export function ExportBurrito() {
 
       if (!exportResponse.ok) {
         enqueueSnackbar(
-          doI18n("pages:content:could_not_export_burrito", i18nRef.current),
+          doI18n(
+            "pages:core-contenthandler-generic:could_not_export_burrito",
+            i18nRef.current,
+          ),
           {
             variant: "error",
           },
@@ -48,7 +51,10 @@ export function ExportBurrito() {
       await saveAs(blob, `${projectName}.zip`);
 
       enqueueSnackbar(
-        doI18n("pages:content:burrito_exported", i18nRef.current),
+        doI18n(
+          "pages:core-contenthandler-generic:burrito_exported",
+          i18nRef.current,
+        ),
         {
           variant: "success",
         },
@@ -61,7 +67,10 @@ export function ExportBurrito() {
       console.error("Error exporting Burrito:", error);
 
       enqueueSnackbar(
-        doI18n("pages:content:could_not_export_burrito", i18nRef.current),
+        doI18n(
+          "pages:core-contenthandler-generic:could_not_export_burrito",
+          i18nRef.current,
+        ),
         {
           variant: "error",
         },
@@ -71,7 +80,10 @@ export function ExportBurrito() {
 
   return (
     <PanDialog
-      titleLabel={doI18n("pages:content:export_burrito", i18nRef.current)}
+      titleLabel={doI18n(
+        "pages:core-contenthandler-generic:export_burrito",
+        i18nRef.current,
+      )}
       isOpen={open}
       closeFn={handleClose}
       fullWidth={true}
@@ -84,7 +96,10 @@ export function ExportBurrito() {
           </Typography>
 
           <Typography>
-            {doI18n("pages:content:about_to_export_burrito", i18nRef.current)}
+            {doI18n(
+              "pages:core-contenthandler-generic:about_to_export_burrito",
+              i18nRef.current,
+            )}
           </Typography>
         </DialogContentText>
       </DialogContent>
@@ -92,9 +107,15 @@ export function ExportBurrito() {
       <PanDialogActions
         closeOnAction={false}
         actionFn={exportBurrito}
-        actionLabel={doI18n("pages:content:do_export", i18nRef.current)}
+        actionLabel={doI18n(
+          "pages:core-contenthandler-generic:do_export",
+          i18nRef.current,
+        )}
         closeFn={handleClose}
-        closeLabel={doI18n("pages:content:cancel", i18nRef.current)}
+        closeLabel={doI18n(
+          "pages:core-contenthandler-generic:cancel",
+          i18nRef.current,
+        )}
       />
     </PanDialog>
   );
