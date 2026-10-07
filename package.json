@@ -18,7 +18,8 @@
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.9.4",
     "notistack": "^3.0.2",
-    "prop-types": "^15.8.1"
+    "prop-types": "^15.8.1",
+    "file-saver": "^2.0.5"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",

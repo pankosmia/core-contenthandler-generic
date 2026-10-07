@@ -20,6 +20,26 @@
           "label": "pages:content:about_repo",
           "url": "/aboutRepo?repoPath=%%REPO_PATH%%"
         }
+      ],
+      "export": [
+        {
+          "subMenu": [
+            {
+              "burrito": [
+                {
+                  "doc": "Export to burrito a textTranslation document",
+                  "placeHolders": {
+                    "REPO_PATH": {
+                      "doc": "The path to the repo in <X>/<Y>/<Z> format"
+                    }
+                  },
+                  "label": "pages:core-contenthandler-generic:saveAsBurrito",
+                  "url": "/export/burrito?repoPath=%%REPO_PATH%%"
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     "x-bcvnotes": {
@@ -110,6 +130,37 @@
     "about_repo_copyright": {
       "en": "Copyright",
       "fr": "Droit d'auteur"
+    },
+    "saveAsBurrito": {
+      "en": "Save as Burrito",
+      "fr": "Sauvegarder Burrito"
+    },
+    "cancel": {
+      "en": "Cancel",
+      "es": "Cancelar",
+      "fr": "Annuler",
+      "id": "Batal"
+    },
+    "do_export": {
+      "en": "Save",
+      "es": "Sauvegarder",
+      "id": "Simpan"
+    },
+    "about_to_export_burrito": {
+      "en": "About to save this content as Burrito",
+      "es": "A punto de guardar este contenido como Burrito"
+    },
+    "export_burrito": {
+      "en": "Save as Burrito",
+      "es": "Guardar como Burrito",
+      "fr": "Sauvegarder au format Burrito",
+      "id": "Simpan sebagai Burrito"
+    },
+    "burrito_exported": {
+      "en": "Burrito was successfuly saved",
+      "es": "El burrito fue guardado correctamente",
+      "fr": "Burrito sauvegardé avec succès",
+      "id": "Burrito telah disimpan"
     }
   }
 }

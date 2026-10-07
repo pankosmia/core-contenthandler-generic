@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import { ThemeProvider } from "@emotion/react";
 import { createTheme, styled } from "@mui/material";
 import { SnackbarProvider, MaterialDesignContent } from "notistack";
+import { ExportBurrito } from "./Export/ExportBurrito";
 
 const router = createHashRouter([
   {
@@ -19,6 +20,10 @@ const router = createHashRouter([
   {
     path: "/aboutRepo",
     element: <AboutRepo />,
+  },
+  {
+    path: "/export/burrito",
+    element: <ExportBurrito />,
   },
   { path: "/deleteBook", element: <DeleteBook /> },
 ]);
