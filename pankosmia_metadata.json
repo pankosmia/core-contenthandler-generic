@@ -1,11 +1,9 @@
 {
   "id": "core-contenthandler-generic",
-  "exclude_from_menu": true,
-  "exclude_from_dashboard": true,
   "require": {
     "net": false,
     "debug": true,
-    "minServerVersion": "0.19.1"
+    "minServerVersion": "0.20.3"
   },
   "endpoints": {
     "all": {
