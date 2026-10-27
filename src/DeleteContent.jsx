@@ -5,7 +5,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import { postEmptyJson } from "pankosmia-lib/http";
+import { postEmpty } from "pankosmia-lib/http";
 import { doI18n } from "pankosmia-lib/i18n";
 import { i18nContext, debugContext } from "pankosmia-rcl";
 import { enqueueSnackbar } from "notistack";
@@ -23,7 +23,7 @@ function DeleteContent({
 
   const deleteRepo = async (repo_path) => {
     const deleteUrl = `/api/git/delete/${repo_path}`;
-    const deleteResponse = await postEmptyJson(deleteUrl, debugRef.current);
+    const deleteResponse = await postEmpty(deleteUrl, debugRef.current);
     if (deleteResponse.ok) {
       enqueueSnackbar(doI18n("pages:content:repo_deleted", i18nRef.current), {
         variant: "success",
@@ -44,7 +44,6 @@ function DeleteContent({
       titleLabel={doI18n("pages:content:delete_content", i18nRef.current)}
       isOpen={open}
       closeFn={() => closeFn()}
-      theme={theme}
     >
       <DialogContent>
         <DialogContentText>
