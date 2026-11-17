@@ -186,7 +186,7 @@ export default function DeleteBook() {
                 key={n}
                 value={listItem}
                 control={<Radio />}
-                label={`${listItem} - ${doI18n(
+                label={`${doI18n(
                   `scripture:books:${listItem}`,
                   i18nRef.current,
                 )}`}
