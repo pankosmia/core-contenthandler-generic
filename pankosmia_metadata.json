@@ -105,6 +105,10 @@
       "fr": "Fermer",
       "id": "Tutup"
     },
+    "cancel": {
+      "en": "Cancel",
+      "fr": "Annuler"
+    },
     "book_deleted": {
       "en": "Book deleted",
       "fr": "Livre supprimé"
@@ -134,6 +138,10 @@
     "delete_book_confirmation": {
       "en": "Select a book to delete from {document_name} *",
       "fr": "Sélectionnez un livre à supprimer de {document_name} *"
+    },
+    "delete": {
+      "en": "Delete",
+      "fr": "Supprimer"
     }
   }
 }

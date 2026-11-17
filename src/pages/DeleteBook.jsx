@@ -143,7 +143,7 @@ export default function DeleteBook() {
         closeFn={() => handleClose()}
         actionsButtonArray={PanDialogActionsArray({
           actionLabel: doI18n(
-            "pages:core-contenthandler-generic:delete_button",
+            "pages:core-contenthandler-generic:delete",
             i18nRef.current,
           ),
           closeFn: () => handleClose(),
