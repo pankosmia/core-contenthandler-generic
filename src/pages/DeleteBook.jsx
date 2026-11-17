@@ -1,25 +1,22 @@
-import { useState, useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
-
+import { useState, useContext, useEffect, useRef } from "react";
 import {
   FormControl,
-  Select,
-  MenuItem,
-  InputLabel,
+  FormHelperText,
   Box,
-  DialogContent,
+  Typography,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
 } from "@mui/material";
 import { useSnackbar } from "notistack";
 import { postJson, getJson } from "pankosmia-lib/http";
 import { doI18n } from "pankosmia-lib/i18n";
-import sx from "../deleteBook/Selection.styles";
-import ListMenuItem from "../deleteBook/ListMenuItem";
 import {
-  PanDialog,
-  PanDialogActions,
   i18nContext,
   debugContext,
   Header,
+  PanBasicDialog,
+  PanDialogActionsArray,
 } from "pankosmia-rcl";
 import ErrorDialog from "../deleteBook/ErrorDialog";
 
@@ -37,14 +34,14 @@ export default function DeleteBook() {
   const hash = window.location.hash;
 
   const query = hash.includes("?") ? hash.split(/[?&]/) : "";
-  const params = new URLSearchParams(window.location.search);
   const repoPathQuery = new URLSearchParams(query[1]);
   const path = repoPathQuery.get("repoPath");
   const typePageQuery = new URLSearchParams(query[2]);
   const typeDelete = typePageQuery.get("type");
-
   const returnType = typePageQuery.get("returnTypePage");
-  const returnTypeDelete = new URLSearchParams(query[3]);
+  const [noBookSelected, setNoBookSelected] = useState(false);
+  const confirmationRef = useRef(null);
+
   const getProjectSummaries = async () => {
     setRepoPath(path);
     const summariesResponse = await getJson(
@@ -93,6 +90,14 @@ export default function DeleteBook() {
   };
 
   const handleDelete = async () => {
+    if (!bookCode) {
+      setNoBookSelected(true);
+      confirmationRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      return;
+    }
     const deleteResponse = await postJson(
       `/api/burrito/ingredient/delete/${repoPath}?ipath=${bookCode}.${typeDelete}`,
       debugRef.current,
@@ -132,69 +137,73 @@ export default function DeleteBook() {
         }}
       />
       <Header titleKey={""} currentId="" requireNet={false} />
-      <PanDialog
-        titleLabel={`${doI18n("pages:core-contenthandler-generic:delete_book", i18nRef.current)} - ${nameProject}`}
+      <PanBasicDialog
+        titleLabel={`${doI18n("pages:core-contenthandler-generic:delete_book", i18nRef.current)}`}
         isOpen={open}
         closeFn={() => handleClose()}
-        fullWidth={false}
-      >
-        <DialogContent>
-          <FormControl sx={{ width: "100%" }}>
-            <InputLabel
-              id="bookCode-label"
-              htmlFor="bookCode"
-              sx={sx.inputLabel}
-            >
-              {doI18n(
-                "pages:core-contenthandler-generic:book_code",
-                i18nRef.current,
-              )}
-            </InputLabel>
-            <Select
-              variant="outlined"
-              required
-              labelId="bookCode-label"
-              name="bookCode"
-              inputProps={{
-                id: "bookCode",
-              }}
-              value={bookCode}
-              label={doI18n(
-                "pages:core-contenthandler-generic:book_code",
-                i18nRef.current,
-              )}
-              onChange={(event) => {
-                setBookCode(event.target.value);
-              }}
-              sx={sx.select}
-            >
-              {bookCodes.map((listItem, n) => (
-                <MenuItem key={n} value={listItem} dense>
-                  <ListMenuItem
-                    listItem={`${listItem} - ${doI18n(
-                      `scripture:books:${listItem}`,
-                      i18nRef.current,
-                    )}`}
-                  />
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </DialogContent>
-        <PanDialogActions
-          closeFn={() => handleClose()}
-          closeLabel={doI18n(
-            "pages:core-contenthandler-generic:close",
-            i18nRef.current,
-          )}
-          actionFn={handleDelete}
-          closeOnAction={false}
-          actionLabel={doI18n(
+        actionsButtonArray={PanDialogActionsArray({
+          actionLabel: doI18n(
             "pages:core-contenthandler-generic:delete_button",
             i18nRef.current,
+          ),
+          closeFn: () => handleClose(),
+          closeLabel: doI18n(
+            "pages:core-contenthandler-generic:cancel",
+            i18nRef.current,
+          ),
+          closeOnAction: false,
+          actionFn: handleDelete,
+        })}
+        dividers={true}
+      >
+        <Typography
+          ref={confirmationRef}
+          color={noBookSelected && "error"}
+          variant="body1"
+        >
+          {noBookSelected
+            ? doI18n(
+                "pages:core-contenthandler-generic:delete_book_confirmation",
+                i18nRef.current,
+              ).replace("{document_name}", nameProject)
+            : doI18n(
+                "pages:core-contenthandler-generic:delete_book_confirmation",
+                i18nRef.current,
+              ).replace("{document_name}", nameProject)}
+        </Typography>
+        <FormControl component="fieldset" error={noBookSelected}>
+          <RadioGroup
+            aria-label="bookCode"
+            aria-describedby={noBookSelected ? "bookCode-error" : undefined}
+            name="bookCode"
+            value={bookCode}
+            onChange={(event) => {
+              setBookCode(event.target.value);
+              setNoBookSelected(false);
+            }}
+          >
+            {bookCodes.map((listItem, n) => (
+              <FormControlLabel
+                key={n}
+                value={listItem}
+                control={<Radio />}
+                label={`${listItem} - ${doI18n(
+                  `scripture:books:${listItem}`,
+                  i18nRef.current,
+                )}`}
+              />
+            ))}
+          </RadioGroup>
+          {noBookSelected && (
+            <FormHelperText id="bookCode-error" role="alert">
+              {doI18n(
+                "pages:core-contenthandler-generic:no_book_selected",
+                i18nRef.current,
+              )}
+            </FormHelperText>
           )}
-        />
-      </PanDialog>
+        </FormControl>
+      </PanBasicDialog>
       {/* Error Dialog */}
       <ErrorDialog
         setErrorDialogOpen={setErrorDialogOpen}

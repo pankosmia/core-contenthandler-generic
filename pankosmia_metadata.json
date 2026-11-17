@@ -113,6 +113,10 @@
       "en": "The book could not be deleted ",
       "fr": "Le livre ne peut pas être supprimé"
     },
+    "no_book_selected": {
+      "en": "Please select a book to delete.",
+      "fr": "Veuillez sélectionner un livre à supprimer."
+    },
     "book_code": {
       "en": "Book",
       "fr": "livre",
@@ -125,7 +129,7 @@
     },
     "delete_book": {
       "en": "Delete Book",
-      "fr": "Supprimer un livre"
+      "fr": "Supprimer livre"
     },
     "about_repo_copyright": {
       "en": "Copyright",
@@ -161,6 +165,10 @@
       "es": "El burrito fue guardado correctamente",
       "fr": "Burrito sauvegardé avec succès",
       "id": "Burrito telah disimpan"
+    },
+    "delete_book_confirmation": {
+      "en": "Select a book to delete from {document_name} *",
+      "fr": "Sélectionnez un livre à supprimer de {document_name} *"
     }
   }
 }
