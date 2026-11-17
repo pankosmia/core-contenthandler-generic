@@ -171,10 +171,9 @@ export default function DeleteBook() {
                 i18nRef.current,
               ).replace("{document_name}", nameProject)}
         </Typography>
-        <FormControl component="fieldset" error={noBookSelected}>
+        <FormControl component="fieldset">
           <RadioGroup
             aria-label="bookCode"
-            aria-describedby={noBookSelected ? "bookCode-error" : undefined}
             name="bookCode"
             value={bookCode}
             onChange={(event) => {
@@ -194,14 +193,6 @@ export default function DeleteBook() {
               />
             ))}
           </RadioGroup>
-          {noBookSelected && (
-            <FormHelperText id="bookCode-error" role="alert">
-              {doI18n(
-                "pages:core-contenthandler-generic:no_book_selected",
-                i18nRef.current,
-              )}
-            </FormHelperText>
-          )}
         </FormControl>
       </PanBasicDialog>
       {/* Error Dialog */}
