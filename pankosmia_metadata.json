@@ -95,41 +95,9 @@
     "stub_content": {
       "en": "Content goes here"
     },
-    "error_data": {
-      "en": "Error fetching data",
-      "fr": "Erreur lors de la récupération des données"
-    },
-    "close": {
-      "en": "Close",
-      "es": "Cerrar",
-      "fr": "Fermer",
-      "id": "Tutup"
-    },
-    "book_deleted": {
-      "en": "Book deleted",
-      "fr": "Livre supprimé"
-    },
-    "book_delete_error": {
-      "en": "The book could not be deleted ",
-      "fr": "Le livre ne peut pas être supprimé"
-    },
-    "book_code": {
-      "en": "Book",
-      "fr": "livre",
-      "es": "Libro",
-      "id": "@Kode Buku"
-    },
     "delete_button": {
       "en": "Delete",
       "fr": "Supprimer"
-    },
-    "delete_book": {
-      "en": "Delete Book",
-      "fr": "Supprimer un livre"
-    },
-    "about_repo_copyright": {
-      "en": "Copyright",
-      "fr": "Droit d'auteur"
     },
     "saveAsBurrito": {
       "en": "Save as Burrito",
@@ -161,6 +129,50 @@
       "es": "El burrito fue guardado correctamente",
       "fr": "Burrito sauvegardé avec succès",
       "id": "Burrito telah disimpan"
+    },
+    "error_data": {
+      "en": "Error fetching data",
+      "fr": "Erreur lors de la récupération des données"
+    },
+    "close": {
+      "en": "Close",
+      "es": "Cerrar",
+      "fr": "Fermer",
+      "id": "Tutup"
+    },
+    "book_deleted": {
+      "en": "Book deleted",
+      "fr": "Livre supprimé"
+    },
+    "book_delete_error": {
+      "en": "The book could not be deleted ",
+      "fr": "Le livre ne peut pas être supprimé"
+    },
+    "no_book_selected": {
+      "en": "Please select a book to delete.",
+      "fr": "Veuillez sélectionner un livre à supprimer."
+    },
+    "book_code": {
+      "en": "book",
+      "fr": "livre"
+    },
+    "delete_book": {
+      "en": "Delete book",
+      "fr": "Supprimer livre"
+    },
+    "about_repo_copyright": {
+      "en": "Copyright",
+      "es": "El burrito fue guardado correctamente",
+      "fr": "Burrito sauvegardé avec succès",
+      "id": "Burrito telah disimpan"
+    },
+    "delete_book_confirmation": {
+      "en": "Select a book to delete from {document_name} *",
+      "fr": "Sélectionnez un livre à supprimer de {document_name} *"
+    },
+    "delete": {
+      "en": "Delete",
+      "fr": "Supprimer"
     }
   }
 }
