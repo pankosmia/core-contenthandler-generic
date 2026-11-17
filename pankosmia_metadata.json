@@ -95,6 +95,41 @@
     "stub_content": {
       "en": "Content goes here"
     },
+    "delete_button": {
+      "en": "Delete",
+      "fr": "Supprimer"
+    },
+    "saveAsBurrito": {
+      "en": "Save as Burrito",
+      "fr": "Sauvegarder Burrito"
+    },
+    "cancel": {
+      "en": "Cancel",
+      "es": "Cancelar",
+      "fr": "Annuler",
+      "id": "Batal"
+    },
+    "do_export": {
+      "en": "Save",
+      "es": "Sauvegarder",
+      "id": "Simpan"
+    },
+    "about_to_export_burrito": {
+      "en": "About to save this content as Burrito",
+      "es": "A punto de guardar este contenido como Burrito"
+    },
+    "export_burrito": {
+      "en": "Save as Burrito",
+      "es": "Guardar como Burrito",
+      "fr": "Sauvegarder au format Burrito",
+      "id": "Simpan sebagai Burrito"
+    },
+    "burrito_exported": {
+      "en": "Burrito was successfuly saved",
+      "es": "El burrito fue guardado correctamente",
+      "fr": "Burrito sauvegardé avec succès",
+      "id": "Burrito telah disimpan"
+    },
     "error_data": {
       "en": "Error fetching data",
       "fr": "Erreur lors de la récupération des données"
@@ -104,10 +139,6 @@
       "es": "Cerrar",
       "fr": "Fermer",
       "id": "Tutup"
-    },
-    "cancel": {
-      "en": "Cancel",
-      "fr": "Annuler"
     },
     "book_deleted": {
       "en": "Book deleted",
