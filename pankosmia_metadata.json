@@ -5,7 +5,7 @@
   "require": {
     "net": false,
     "debug": true,
-    "minServerVersion": "0.20.3"
+    "minServerVersion": "0.23.1"
   },
   "endpoints": {
     "all": {
@@ -173,6 +173,68 @@
     "delete": {
       "en": "Delete",
       "fr": "Supprimer"
+    },
+    "details": {
+      "en": "Details",
+      "es": "Detalles",
+      "fr": "Détails",
+      "id": "Detail"
+    },
+    "language": {
+      "en": "Language",
+      "es": "Idioma",
+      "fr": "Langue",
+      "id": "Bahasa"
+    },
+    "copyright": {
+      "en": "Copyright",
+      "es": "Derechos de autor",
+      "fr": "Droit d'auteur",
+      "id": "Hak cipta"
+    },
+    "abbreviation": {
+      "en": "Abbreviation",
+      "es": "Abreviatura",
+      "fr": "Abréviation",
+      "id": "Singkatan"
+    },
+    "repo_name": {
+      "en": "Name",
+      "es": "Nombre",
+      "fr": "Nom",
+      "id": "Nama"
+    },
+    "description": {
+      "en": "Description",
+      "es": "Descripción",
+      "fr": "Description",
+      "id": "Deskripsi"
+    },
+    "about_document": {
+      "en": "About",
+      "fr": "À propos"
+    },
+    "dateUdapted": {
+      "en": "Last update",
+      "fr": "Dernière mise à jour"
+    },
+    "local_resource": {
+      "en": "Local resource",
+      "fr": "Ressource locale",
+      "es": "Recurso local",
+      "id": "Sumber daya lokal"
+    },
+    "local_project": {
+      "en": "Local project",
+      "fr": "Projet local",
+      "es": "Proyecto local",
+      "id": "Proyek lokal"
+    },
+    "required_field": {
+      "en": "This field is required",
+      "es": "Este campo es obligatorio",
+      "fr": "Ce champ est obligatoire",
+      "id": "Kolom ini wajib diisi"
     }
   }
 }

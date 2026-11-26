@@ -1,7 +1,7 @@
 allowBuilds:
   esbuild: true
 minimumReleaseAgeExclude:
-  - pankosmia-rcl@0.4.22 || 0.8.4 || 0.8.5 || 0.8.9
+  - pankosmia-rcl@0.4.22 || 0.8.4 || 0.8.5 || 0.8.9 || 0.8.16 || 0.8.17
 supportedArchitectures:
   os:
     - win32
